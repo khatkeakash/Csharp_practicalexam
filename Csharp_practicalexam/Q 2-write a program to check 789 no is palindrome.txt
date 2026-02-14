@@ -1,0 +1,23 @@
+class PalindromeNumber
+{
+    public static void Main(string[] args)
+    {
+        Console.Write("Enter number: ");
+        int num = int.Parse(Console.ReadLine());
+
+        int original = num;
+        int reversed = 0;
+
+        while (num > 0)
+        {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num = num / 10;
+        }
+
+        if (original == reversed)
+            Console.WriteLine("Palindrome number");
+        else
+            Console.WriteLine("Not a palindrome number");
+    }
+}
